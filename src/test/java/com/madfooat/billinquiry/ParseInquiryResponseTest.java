@@ -13,7 +13,7 @@ public class ParseInquiryResponseTest {
 
     @Test
     public void givenValidXMLResponse_WhenParse_ThenReturnValidBillsList() {
-        assertEquals(2, parseXMLInquiryResponse.parse(VALID_XML_RESPONSE));
+        assertEquals(2, parseXMLInquiryResponse.parse(VALID_XML_RESPONSE).size());
     }
 
     @Test(expected = InvalidBillInquiryResponse.class)
@@ -23,7 +23,7 @@ public class ParseInquiryResponseTest {
 
     @Test
     public void givenValidJSONResponse_WhenParse_ThenReturnValidBillsList() {
-        assertEquals(2, parseJSONInquiryResponse.parse(VALID_JSON_RESPONSE));
+        assertEquals(2, parseJSONInquiryResponse.parse(VALID_JSON_RESPONSE).size());
     }
 
     @Test(expected = InvalidBillInquiryResponse.class)

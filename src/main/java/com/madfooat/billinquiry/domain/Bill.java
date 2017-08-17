@@ -1,20 +1,20 @@
 package com.madfooat.billinquiry.domain;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Bill {
 
-    private LocalDate dueDate;
+    private Date dueDate;
     private BigDecimal dueAmount;
     private BigDecimal fees;
 
 
-    public LocalDate getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 

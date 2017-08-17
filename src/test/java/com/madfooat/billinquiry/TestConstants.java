@@ -7,12 +7,12 @@ public class TestConstants {
                     "<Bills> " +
                     "<bill id='1'> " +
                     "<dueDate>15-08-2017</dueDate> " +
-                    "<amount>198.98</amount> " +
+                    "<dueAmount>198.98</dueAmount> " +
                     "<fees>0.139</fees> " +
                     "</bill>" +
                     "<bill id='2'>" +
                     "<dueDate>13-07-2017</dueDate>" +
-                    "<amount>50.989</amount>" +
+                    "<dueAmount>50.989</dueAmount>" +
                     "</bill>" +
                     "</Bills>";
 
@@ -21,24 +21,13 @@ public class TestConstants {
                     "<Bills>" +
                     "   <bill id='1'>" +
                     "       <dueDate>15-08-2017</dueDate>" +
-                    "       <amount>198.9889</amount>" +
+                    "       <dueAmount>198.9889</dueAmount>" +
                     "       <fees>0.139</fees>" +
                     "   </bill>" +
                     "</Bills>";
 
 
-    public static final String VALID_JSON_RESPONSE = "{" +
-            "  \"[{" +
-            "\"billDueDate\": \"9-7-2017\"," +
-            "\"amount\": \"21.001\"" +
-            "}, {" +
-            "\"billDueDate\": \"15-8-2017\"," +
-            "\"amount\": \"34.001\"" +
-            "}]";
+    public static final String VALID_JSON_RESPONSE = "[{\"dueDate\": \"15-08-2017\",\"dueAmount\": \"198.98\",\"fees\": \"0.139\"},{\"dueDate\": \"13-07-2017\",\"dueAmount\": \"50.989\"}]";
 
-    public static final String INVALID_JSON_RESPONSE = "{" +
-            "  \"[{" +
-            "\"billDueDate\": \"15-10-2017\"," +
-            "\"amount\": \"34.0771\"" +
-            "}]";
+    public static final String INVALID_JSON_RESPONSE = "[{\"dueDate\": \"15-08-2017\",\"amount\": \"198.98\",\"stamps\": \"0.139\"}]";
 }
