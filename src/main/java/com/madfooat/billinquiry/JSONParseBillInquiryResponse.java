@@ -2,8 +2,20 @@ package com.madfooat.billinquiry;
 
 import com.madfooat.billinquiry.domain.Bill;
 import com.madfooat.billinquiry.exceptions.InvalidBillInquiryResponse;
+import java.util.*;
+import java.math.BigDecimal;
+import java.io.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.*;
 
-import java.util.List;
+import java.text.*;
+import java.lang.reflect.*;
+
 
 public class JSONParseBillInquiryResponse implements ParseBillInquiryResponse {
 	    
